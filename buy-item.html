@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="buy-item.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Add click event listener to the button
+            const confirmButton = document.querySelector(".confirm");
+            confirmButton.addEventListener("click", function () {
+                // Show a thank you message
+                alert("Thank you for your order!");
+
+                // Redirect to the home page (index1.html)
+                window.location.href = "index1.html";
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="main">
+        <a href="index1.html">Back</a>
+       <header>
+        <h1>Review your Order</h1>
+       </header>
+       <div class="order-details">
+            <h2>Order Details</h2>
+            <table>
+                <tr>
+                    <th>Item : </th>
+                    <td id="item-name">Item Name </td>
+                </tr>
+                <tr>
+                    <th>Price : </th>
+                    <td id="item-price">$0.00</td>
+                </tr>
+                <tr>
+                    <th>Quantity : </th>
+                    <td id="item-quantity">1</td>
+                </tr>
+                <tr>
+                    <th>Total : </th>
+                    <td id="item-total">$0.00</td>
+                </tr>
+                <tr>
+                    <th>Shipping Address : </th>
+                    <td id="shipping-address"><span id="display-address"></span></td>
+                </tr>
+            </table>
+       </div>
+       <div class="payment-method">
+          <h2>Payment Method</h2>
+          <table>
+              <tr>
+                  <td>
+                      <input type="radio" id="COD" name="payment-method" value="COD" checked>
+                      <label for="COD">Cash on Delivery</label>
+                  </td>
+              </tr>
+          </table>
+       </div>
+       <button class="confirm">Order Placed</button>
+    </div>
+   <script>
+    const address = localStorage.getItem('address');
+        if (address) {
+            // Display the username in the span element
+            document.getElementById('display-address').textContent = address;
+        } else {
+            // Fallback if no username is found
+            document.getElementById('display-username').textContent = 'XXXX';
+        }
+   </script>
+</body>
+</html>

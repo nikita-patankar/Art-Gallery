@@ -1,0 +1,78 @@
+body{
+    font-family: sans-serif;
+    background-color: #f8fafc;
+    margin: 20px;
+}
+
+.main{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:cadetblue;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    text-align: center;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.artist-image{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.artist-works{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.artist-work{
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.work-item{
+    box-shadow:0 2px 5px rgba(0, 0, 0, 0.3) ;
+    padding: 10px;
+    background-color: antiquewhite;
+}
+
+.work-image{
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    /* border: 1px solid black; */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.work-info h2{
+    font-size: medium;
+}
+
+button{
+    background-color:crimson;
+    padding: 5px 15px;
+    border-radius: 1rem;
+}
